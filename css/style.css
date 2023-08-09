@@ -3,6 +3,7 @@
     font-family:'Space Mono', monospace;
 }
 
+
 main, #header {
     max-width: 1440px;
     margin : 0 auto;
@@ -74,22 +75,57 @@ main, #header {
     font-weight: 700;
 }
 
+/* The Modal (background) */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
 /* ------------------------------ Contact ------------------------------  */
 
-.modalecontent {
+.modale-content {
     width: 600px;
-    height: 665px;
     margin: auto;
     border: 5px solid black;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contactimg {
+    width: 590px;
+}
+
+.form {
+    padding-top: 20px;
 }
 
 .wpcf7-form {
     display: flex;
     justify-content: center;
+    margin-left: 50px;
 }
-
-
 
 .wpcf7-form-control {
     background-color: #fff;
@@ -97,25 +133,40 @@ main, #header {
 }
 
 .wpcf7-textarea {
-    height: 200px;
-    width: 270px;
-    border: 1px solid #000000;
-
+    height: 210px;
+    width: 263px;
+    border: 1px solid #B8BBC2;
+    border-radius: 10px;
+    margin-top: 5px;
 }
 
 .wpcf7-text {
     height: 40px;
-    width: 270px;
-    border: 1px solid #000000;
+    width: 263px;
+    border: 1px solid #B8BBC2;
+    border-radius: 10px;
+    margin-top: 5px;
 }
 
 .wpcf7-submit {
-    height: 38px;
-    width: 214px;
+    height: 50px;
+    width: 263px;
     border-radius: 5px;
     background-color: #D8D8D8;
     border: none;
-    font-weight: 500;
-    
-
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: -1px;
 }
+
+.wpcf7-submit:hover {
+    background-color: darkgrey;
+}
+
+.contactform p {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #313144;
+    letter-spacing: -1px;
+}
+

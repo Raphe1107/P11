@@ -6,6 +6,13 @@ function custom_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'custom_styles' );
 
+function script()
+{
+  wp_enqueue_script('modale', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
+  
+}
+add_action('wp_enqueue_scripts', 'script');
+
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 
