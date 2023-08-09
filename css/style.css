@@ -1,16 +1,27 @@
+* {
+    box-sizing: border-box;
+    font-family:'Space Mono', monospace;
+}
+
+main, #header {
+    max-width: 1440px;
+    margin : 0 auto;
+}
+
+
+/* ------------------------------ Header ------------------------------  */
+
 
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
     background-color: white;
 }
 
 .logo {
-    width: 216px;
-    height: 14px;
+    width: 316px;
+    height: 24px;
 }
 
 .header-menu {
@@ -35,10 +46,11 @@
 }
 
 
+/* ------------------------------  Footer ------------------------------  */
+
+
 #footer {
-    max-width: 1440px;
     border-top: 1px solid black;
-    margin: 0 auto;
 }
 .footer-menu {
     display: flex;
@@ -60,4 +72,50 @@
 
 .footer-menu a:hover {
     font-weight: 700;
+}
+
+
+/* ------------------------------ Contact ------------------------------  */
+
+.modalecontent {
+    width: 600px;
+    height: 665px;
+    margin: auto;
+    border: 5px solid black;
+}
+
+.wpcf7-form {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.wpcf7-form-control {
+    background-color: #fff;
+
+}
+
+.wpcf7-textarea {
+    height: 200px;
+    width: 270px;
+    border: 1px solid #000000;
+
+}
+
+.wpcf7-text {
+    height: 40px;
+    width: 270px;
+    border: 1px solid #000000;
+}
+
+.wpcf7-submit {
+    height: 38px;
+    width: 214px;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+    border: none;
+    font-weight: 500;
+    
+
 }

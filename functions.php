@@ -15,10 +15,8 @@ add_theme_support( 'title-tag' );
 //ajout de deux zones de menu à mon thème
 function register_my_menus() {
  register_nav_menus(
-    array(
-    'header-menu' => __( 'Menu du Header' ),
-    'footer-menu' => __( 'Menu du Footer' ),
-    )
-    );
+   array( 'header-menu' => __( 'Menu du Header' ),
+   'footer-menu' => __( 'Menu du Footer' ),)
+   );
    }
    add_action( 'init', 'register_my_menus' );
