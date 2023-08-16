@@ -1,4 +1,4 @@
- <div id="myModal "class="modale">
+<div id="contact" class="modale">
     <div class="modale-content">
          <img class="contactimg" src="<?php echo get_stylesheet_directory_uri(); ?> /images/contact.png" alt="contact logo">
          <div class="form">
@@ -6,4 +6,4 @@
          </div>
     </div>
     <span class="close">x</span>
- </div>
+</div>
