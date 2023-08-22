@@ -46,6 +46,10 @@ main, #header {
     font-weight: 700;
 }
 
+#Btncontact {
+    cursor: pointer;
+}
+
 
 /* ------------------------------  Footer ------------------------------  */
 
@@ -96,13 +100,15 @@ main, #header {
     width: 600px;
     margin: auto;
     border: 5px solid black;
+    margin-top: 150px;
+    background-color: white;
 }
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: black;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -171,4 +177,65 @@ main, #header {
 }
 
 
+/* ------------------------------ Accueil ------------------------------  */
+.hero {
+    background-image: url('../images/photo_header.png');
+    background-size: cover;
+    background-position: center;
+    height: 962px;
+    
+    
+}
+.hero h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-size: 6vw;
+    color:transparent;
+    -webkit-text-stroke: 2px white;
+    padding-top : 400px;
+}
 
+
+
+/* ------------------------------ Single photo ------------------------------  */
+
+.photodetails {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.photo-title {
+    font-size:  42px;
+    text-transform: uppercase;
+}
+
+.photodetails p {
+    text-transform: uppercase;
+    cursor: default;
+    
+}
+
+.photodetails a {
+    text-decoration: none;
+    cursor:default;
+}
+
+.refphoto {
+    border-bottom: solid 1px black;
+}
+
+.photo {
+    max-width: 564px;
+    position: relative;
+    
+}
+
+.photo img{
+    max-width: 265px;
+    max-height: 397px;
+}

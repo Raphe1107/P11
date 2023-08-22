@@ -8,7 +8,7 @@ add_action( 'wp_enqueue_scripts', 'custom_styles' );
 
 function script()
 {
-  wp_enqueue_script('modale', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
   
 }
 add_action('wp_enqueue_scripts', 'script');
@@ -27,3 +27,38 @@ function register_my_menus() {
    );
    }
    add_action( 'init', 'register_my_menus' );
+
+
+function add_contact_link( $items, $args ) {
+    $contact = '<li><a id="Btncontact">Contact</a></li>';
+    if ( $args->theme_location == 'header-menu' ) {
+      $items = $items . $contact;
+    }
+    return $items;
+  }
+add_filter( 'wp_nav_menu_items', 'add_contact_link', 10, 2 );
+
+function set_photo_post_type_default_editor() {
+  $post_type = 'photo'; // Remplacez 'photo' par le slug de votre type de publication personnalisé
+  
+  if (isset($_GET['post']) && $_GET['post'] != '' && isset($_GET['action']) && $_GET['action'] == 'edit') {
+      $post_id = $_GET['post'];
+      $post = get_post($post_id);
+
+      if ($post->post_type == $post_type && $post->post_content == '') {
+          $post->post_content = '[Block default content goes here]';
+          wp_update_post($post);
+      }
+  }
+}
+add_action('admin_init', 'set_photo_post_type_default_editor');
+
+
+
+  
+
+
+
+
+   
+  
