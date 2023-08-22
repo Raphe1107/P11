@@ -195,7 +195,46 @@ main, #header {
     color:transparent;
     -webkit-text-stroke: 2px white;
     padding-top : 400px;
+    margin-top: 0;
 }
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.cate_format {
+    display: flex;
+}
+
+.category {
+    margin-right: 20px;
+}
+
+.filters select {
+    width: 260px;
+    height: 43px;
+    border: 2px #B8BBC2 solid;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('../images/Icon.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 220px;
+    
+}
+
+.filters option {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
 
 
 
