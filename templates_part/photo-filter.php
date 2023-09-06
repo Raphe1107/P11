@@ -1,9 +1,3 @@
-<?php get_header() ?>
-
-<section class="hero">
-    <h1 >PHOTOGRAPHE EVENT</h1>
-</section>
-
 <section class="filters">
     <div class="cate_format">
         <div class="category">
@@ -50,24 +44,4 @@
 			<option value="ASC">Les plus anciennes</option>
 		</select>
     </form>
-	
-    
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php get_footer() ?>
