@@ -6,19 +6,19 @@
 			<?php get_template_part('templates_part/photo-detail'); ?>
 
 
+			<section class="interesse">
+				<div class="textbutton">
+					<p> Cette photo vous interesse ?</p>
+					<a id="Buttoncontact" class="loadmore_style buttoncontact">Contact</a>	
+				</div>
+				<?php get_template_part('templates_part/nextprevarrow'); ?>
+			</section>
 
-		<?php endwhile;
-endif; ?>
+			<section class="vousaimerezaussi">
+				<?php get_template_part('templates_part/photo-suggestion'); ?>
+			</section>
+		<?php endwhile; ?>
+	<?php	endif; ?>
 
-<section class="interesse">
-
-<div class="textbutton">
-	<p> Cette photo vous interesse ?</p>
-	<button class="loadmore_style buttoncontact">Contact</button>
-</div>
-
-
-
-</section>
 
 <?php get_footer(); ?>

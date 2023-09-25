@@ -2,12 +2,12 @@
     <article>
         <?php if (get_post_type() === 'photos') : ?>
 
-            <!-- IMAGE -->
+            <!-- image -->
             <div class="overlay-image">
                 <a class="img-block" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
             </div>
 
-            <!-- SURVOL DE L'IMAGE -->
+            <!-- survol de l'image -->
             <div class="image-contenu">
                 <img class="fullscreen" src="<?php echo get_stylesheet_directory_uri(); ?> '/images/fullscreen.png' " alt="fullsreen">
                 <a class="" href="<?php the_permalink(); ?>"><img class="eye"src="<?php echo get_stylesheet_directory_uri(); ?> '/images/eye.png' " alt="oeil"></a>

@@ -1,13 +1,13 @@
 <div class="hero">
     <div class="hero-photo">
-        <!-- Initialisation de post à afficher -->
+        
         <?php   
             $args = array( 
             'post_type' => 'photos',
             'orderby'   => 'rand',
             'posts_per_page' => 1,
             );
-            //On crée ensuite une instance de requête WP_Query basée sur les critères placés dans la variables $args
+            
             $query_hero = new WP_Query( $args );            
         ?>
         
@@ -23,6 +23,6 @@
     </div>  
 </div>
 <?php
-    // On réinitialise à la requête principale
+    
     wp_reset_postdata();       
 ?>

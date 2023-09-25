@@ -382,12 +382,12 @@ main {
 
 .post {
     position: relative;
-	width: 50%;
-	height: 50%;
 	display: flex;
 	align-items: end;
+    height: 65vh;
+    width: 25%;
 	margin-top: 30px;
-    margin-left: 160px;
+    margin-left: 20px;
 }
 
 .post:hover .single-image-hover{
@@ -397,8 +397,8 @@ main {
 
 .single-image-hover{
 	position: absolute;
-	height: 844px;
-    width: 563px;
+	height: 100%;
+    width: 100%;
 	display: flex;
 	flex-direction: column;
 	display: none;
@@ -414,8 +414,8 @@ main {
 
 .post img{
 	object-fit: contain;
-	width: 844px;
-    width: 563px;
+	height: 100%;
+    width: 100%;
 	display: flex;
 	height: auto;
 }
@@ -426,10 +426,10 @@ main {
 
 .interesse {
     display: flex;
-    margin-left: 250px;
     margin-top: 40px;
     margin-bottom: 40px;
     border-bottom: solid 1px black;
+    margin-left: 250px;
 }
 
 .textbutton {
@@ -439,11 +439,102 @@ main {
 
 .buttoncontact {
     margin-left: 535px;
-    cursor: pointer;
     padding:20px 100px 20px 100px;
+    cursor: pointer;
 }
 
-.textbutton a{
-    text-decoration: none;
+
+/* ------------------------------ Next and previous ------------------------------  */
+
+.next-prev-photo {
+    width: 25%;
+	display: flex;
+	justify-content: end;
+	align-items: end;
+}
+
+.next_photo {
+    margin-left: 20px;
+}
+
+.right,
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.arrowleft {
+    margin-right: 45px
+}
+
+
+/* ------------------------------ Vous aimerez aussi ------------------------------  */
+
+.vousaimerezaussi{
+	font-family: "Space Mono";
+	text-transform: uppercase;
+    margin-left: 250px;
+}
+
+.vousaimerezaussi p{
+	margin-bottom: 50px;
+	margin-top: 70px;
+	font-size: 22px;
+}
+
+.same-photo-cat{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+.double-img {
+	display: flex;
+	justify-content: center;
+}
+
+.same-photo-cat img{
+	width: 564px;
+	height: 495px;
+	object-fit: cover;
+}
+
+.double-img:hover .image-contenu {
+    background: rgba(0,0,0,0.5);
+	display: block;
+}
+
+
+.double-img:hover .image-contenu .fullscreen {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
+    width: 7%;
+    height: 7%;
+}
+
+.double-img:hover .image-contenu .eye {
+	color: white;
+	position: absolute;
+	left: 260px;
+	bottom: 220px;
+	cursor: pointer;
+    width: 10%;
+    height: 10%;
+}
+
+.plusdephoto{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.plusdephoto button {
+    cursor: pointer;
 }
 
