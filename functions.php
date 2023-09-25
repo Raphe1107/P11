@@ -9,6 +9,7 @@ add_action( 'wp_enqueue_scripts', 'custom_styles' );
 function script()
 {
   wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
   
 }
 add_action('wp_enqueue_scripts', 'script');
@@ -39,7 +40,7 @@ function add_contact_link( $items, $args ) {
 add_filter( 'wp_nav_menu_items', 'add_contact_link', 10, 2 );
 
 function set_photo_post_type_default_editor() {
-  $post_type = 'photo'; // Remplacez 'photo' par le slug de votre type de publication personnalisé
+  $post_type = 'photos'; 
   
   if (isset($_GET['post']) && $_GET['post'] != '' && isset($_GET['action']) && $_GET['action'] == 'edit') {
       $post_id = $_GET['post'];
@@ -52,6 +53,13 @@ function set_photo_post_type_default_editor() {
   }
 }
 add_action('admin_init', 'set_photo_post_type_default_editor');
+
+
+
+
+
+
+
 
 
 

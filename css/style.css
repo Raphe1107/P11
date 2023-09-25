@@ -4,7 +4,7 @@
 }
 
 
-main, #header {
+main {
     max-width: 1440px;
     margin : 0 auto;
 }
@@ -18,6 +18,7 @@ main, #header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    margin-left: 250px;
 }
 
 .logo {
@@ -27,6 +28,7 @@ main, #header {
 
 .header-menu {
     display: flex;
+    margin-right: 250px;
 }
 
 .header-menu li {
@@ -79,19 +81,18 @@ main, #header {
     font-weight: 700;
 }
 
-/* The Modal (background) */
 
 .modale {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 /* ------------------------------ Contact ------------------------------  */
@@ -104,7 +105,6 @@ main, #header {
     background-color: white;
 }
 
-/* The Close Button */
 .close {
     color: black;
     float: right;
@@ -178,6 +178,7 @@ main, #header {
 
 
 /* ------------------------------ Accueil ------------------------------  */
+
 .hero .hero-photo {
     position: relative;
     margin: auto;
@@ -209,8 +210,9 @@ main, #header {
 
 .filters {
     display: flex;
-    justify-content: space-around;
     margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 690px;
 }
 
 .cate_format {
@@ -219,6 +221,10 @@ main, #header {
 
 .category {
     margin-right: 20px;
+}
+
+.trierpar {
+    margin-left: 345px;
 }
 
 .filters select {
@@ -240,72 +246,204 @@ main, #header {
 
 .filters option {
     font-size: 15px;
-    font-weight: 600;
-}
-
-
-.indexphoto figure {
-    width:42vw;
-    height:70vh;
-    object-fit: cover;
+    font-weight: 600; 
 }
 
 .indexphoto{
     display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    width:95vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto 20px;
+    gap: 15px;
 }
 
-.indexphoto figure img{
-    width:42vw;
-    height:70vh;
-    object-fit: cover;
+.overlay-image  {
+    width:564px;
+    height:495px;
+    position: absolute;
+}
+
+.image-post:hover .image-contenu{
+	background: rgba(0,0,0,0.5);
+	display: block;
+}
+
+.image-contenu{
+	position: absolute;
+	width: 564px;
+	height: 495px;
+	display: flex;
+	flex-direction: column;
+	display: none;
 }
 
 
+.hover-title{
+	text-transform: uppercase;
+	color: white;
+	position: absolute;
+	left: 20px;
+    top: 445px;
+}
 
+.hover-categorie{
+	text-transform: uppercase;
+	position: absolute;
+	right: 20px;
+    top: 445px;
+}
 
+.hover-categorie a {
+    text-decoration: none;
+    color: white;
+}
 
+.fullscreen {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
+    
+}
 
+.eye {
+	color: white;
+	position: absolute;
+	left: 260px;
+	bottom: 220px;
+	cursor: pointer;
+}
+
+.image-post article {
+    overflow: hidden;
+	width: 564px;
+	height: 495px;
+}
+
+.img-block img{
+	object-fit: cover;
+	width: 100%;
+	height: 495px;
+}
+
+.button_loadmore {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 35px;
+}
+
+.button_loadmore a {
+    text-decoration: none;
+}
+
+.loadmore_style {
+    background-color: #D8D8D8;
+    border: none;
+    padding: 15px 90px 15px 90px;
+    border-radius: 3px;
+}
 
 /* ------------------------------ Single photo ------------------------------  */
 
 .photodetails {
-    margin: 0 auto;
-    max-width: 1440px;
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    width: 100%;
+    
 }
 
 .photo-title {
-    font-size:  42px;
+    font-size:  90px;
     text-transform: uppercase;
 }
 
 .photodetails p {
     text-transform: uppercase;
     cursor: default;
+    font-size: 20px;
     
 }
 
 .photodetails a {
     text-decoration: none;
     cursor:default;
+    pointer-events: none;
 }
 
 .refphoto {
     border-bottom: solid 1px black;
+    width: 50%;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
-.photo {
-    max-width: 564px;
+.post {
     position: relative;
-    
+	width: 50%;
+	height: 50%;
+	display: flex;
+	align-items: end;
+	margin-top: 30px;
+    margin-left: 160px;
 }
 
-.photo img{
-    max-width: 265px;
-    max-height: 397px;
+.post:hover .single-image-hover{
+	background: rgba(0,0,0,0.5);
+	display: block;
 }
+
+.single-image-hover{
+	position: absolute;
+	height: 844px;
+    width: 563px;
+	display: flex;
+	flex-direction: column;
+	display: none;
+}
+
+.single-image-hover .fullscreen {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
+    width: 7%;
+}
+
+.post img{
+	object-fit: contain;
+	width: 844px;
+    width: 563px;
+	display: flex;
+	height: auto;
+}
+
+
+
+/* ------------------------------ Section interet ------------------------------  */
+
+.interesse {
+    display: flex;
+    margin-left: 250px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-bottom: solid 1px black;
+}
+
+.textbutton {
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.buttoncontact {
+    margin-left: 535px;
+    cursor: pointer;
+    padding:20px 100px 20px 100px;
+}
+
+.textbutton a{
+    text-decoration: none;
+}
+

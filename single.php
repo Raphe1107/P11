@@ -1,23 +1,24 @@
-<?php
-/**
- * Template pour les articles
- **/
+<?php get_header(); ?>
 
-get_header();
 
-/* Lancement de la boucle */
-while ( have_posts() ) :
-	the_post();
+<?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+			<?php get_template_part('templates_part/photo-detail'); ?>
 
-	get_template_part( 'template-parts/content/content-single' );
 
-	
-	// Si les commentaires sont autorisés et qu'il y a au moins un commentaire alors on charge le modèle de commentaire
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
 
-	
-endwhile; // Fin de la boucle
+		<?php endwhile;
+endif; ?>
 
-get_footer();
+<section class="interesse">
+
+<div class="textbutton">
+	<p> Cette photo vous interesse ?</p>
+	<button class="loadmore_style buttoncontact">Contact</button>
+</div>
+
+
+
+</section>
+
+<?php get_footer(); ?>

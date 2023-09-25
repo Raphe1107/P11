@@ -36,12 +36,13 @@
             </select>
         </form>
     </div>
-
-    <form class="js-filter-form" method="get">	
-		<select id="date-select">
-            <option value="all" hidden>TRIER PAR</option>
-			<option value="DESC">Nouveautés</option>
-			<option value="ASC">Les plus anciennes</option>
-		</select>
-    </form>
+    <div class="trierpar">
+        <form action="" method="get">	
+            <select id="date-select">
+                <option value="all" hidden>TRIER PAR</option>
+                <option value="DESC">Nouveautés</option>
+                <option value="ASC">Les plus anciennes</option>
+            </select>
+        </form>
+    </div>
 </section>

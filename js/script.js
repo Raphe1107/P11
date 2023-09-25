@@ -1,6 +1,5 @@
 /* ---------- Contact ---------- */
 
-
 var modal = document.getElementById("contact");
 var btncontact = document.getElementById("Btncontact");
 var closecontact = document.querySelector(".close");
@@ -27,3 +26,5 @@ window.onclick = function(event) {
 jQuery(document).ready(function($) {
     $('[name="your-subject"]').val('bf');
 });
+
+

@@ -4,37 +4,38 @@
 
 <?php get_template_part('templates_part/photo-filter'); ?>
 
-<section class="indexphoto container">
+<section class="indexphoto">
+
   <?php $args = array(
-     'post_type' => 'photos',
-     'posts_per_page' => 8,
-     'post__not_in' => array (get_the_ID()),
-      'paged'=>1);
-     $query = new WP_Query( $args );
+    'post_type' => 'photos',
+    'posts_per_page' => 8,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'paged'=>1,
+    );
+    
+    $query = new WP_Query( $args );
+    
+    
+    if ($query->have_posts()):
+        while ($query->have_posts()):
+            $query->the_post(); ?>
+            
+            <?php get_template_part('templates_part/photo-block'); ?>
+
+            <?php
+        endwhile; ?>
+
+
+    <?php else: ?>
+        <p>Désolé, aucun article ne correspond à cette requête</p>
+    <?php endif;
+    wp_reset_query();
     ?>
-  <?php if($query->have_posts()) : ?>
-        <?php while($query->have_posts()) : ?>
-            <?php $query->the_post();?>       
-            <div class="overlay-image">
-                    <?php the_content(); ?>
-                    <div class=hover>
-                         <img class="full_screen" data-image="<?php echo get_the_post_thumbnail_url(); ?>" src="<?php echo get_template_directory_uri(); ?>./assets/fullscreen.png" alt="full_screen">
-                         <a href="<?php echo get_the_permalink(get_the_ID());?>">
-                             <img class="eye" src="<?php echo get_template_directory_uri(); ?>./assets/eye.png" alt="eye">
-                         </a>
-                         <div class="texte">
-                                <div><?php the_title(); ?></div>
-                                <div class="right_now"><?php echo strip_tags(get_the_term_list($post->ID, 'categorie'));?></div>
-                         </div>
-                    </div>
-           </div>
-       <?php endwhile; ?>
-    <?php endif; 
-    wp_reset_postdata();?>
 </section>
 
-<div class="btn__wrapper">
-    <input type="button" Value="Charger plus" class="btn btn__primary" id="load-more">
+<div class="button_loadmore">
+    <a href="#" class="loadmore_style" id="load-more-button">Charger plus</a>
 </div>
 
 
