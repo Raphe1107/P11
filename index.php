@@ -1,11 +1,11 @@
 <?php get_header() ?>
 
-<?php get_template_part('templates_part/hero'); ?>
+<?php get_template_part('templates_part/hero'); ?> <!-- Ajout du template hero --> 
 
-<?php get_template_part('templates_part/photo-filter'); ?>
+<?php get_template_part('templates_part/photo-filter'); ?> <!-- Ajout du template contenant les filtres --> 
 
 <section class="indexphoto">
-
+   
   <?php $args = array(
     'post_type' => 'photos',
     'posts_per_page' => 8,
@@ -18,10 +18,11 @@
     
     
     if ($query->have_posts()):
+        
         while ($query->have_posts()):
             $query->the_post(); ?>
             
-            <?php get_template_part('templates_part/photo-block'); ?>
+            <?php get_template_part('templates_part/photo-block'); ?> <!-- Ajout du template des images --> 
 
             <?php
         endwhile; ?>
@@ -34,8 +35,9 @@
     ?>
 </section>
 
+<!-- Bouton charger plus -->
 <div class="button_loadmore">
-    <a href="#" class="loadmore_style" id="load-more-button">Charger plus</a>
+    <a href="#!" class="loadmore_style" id="load-more-button">Charger plus</a>
 </div>
 
 

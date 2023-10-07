@@ -15,10 +15,12 @@
 <header id="header"> 
     <div>
         <a href="<?php echo home_url(); ?>">
+        <!-- Ajout logo -->
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" class="logo">
         </a>
     </div>
     <nav>
+        <!-- Menu header -->
         <?php wp_nav_menu ( array ('theme_location' => 'header-menu' ,'menu_class' => 'header-menu','container' => false ) ); ?> 
     </nav>
 </header>

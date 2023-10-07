@@ -38,7 +38,7 @@
     </div>
     <div class="trierpar">
         <form action="" method="get">	
-            <select id="date-select">
+            <select name="date" id="date-select">
                 <option value="all" hidden>TRIER PAR</option>
                 <option value="DESC">Nouveautés</option>
                 <option value="ASC">Les plus anciennes</option>

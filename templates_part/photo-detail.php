@@ -22,12 +22,26 @@
     </div>
 
     <div class="post">
-        <div class="single-image">
-            <?php the_post_thumbnail(); ?>
+        <div class="single-image" data-image="<?php echo esc_attr(get_the_post_thumbnail_url(get_the_ID())); ?>">
+            <?php the_post_thumbnail(); ?> 
         </div>
 
         <div class="single-image-hover">
-        <img class="fullscreen" src="<?php echo get_stylesheet_directory_uri(); ?> '/images/fullscreen.png' " alt="fullscreen">
+            <img class="fullscreen" src="<?php echo get_stylesheet_directory_uri(); ?> '/images/fullscreen.png' " alt="fullscreen" 
+                data-image="<?php echo esc_attr(get_the_post_thumbnail_url(get_the_ID())); ?>" 
+                <?php
+                $terms = get_the_terms(get_the_ID(), 'categorie');
+                $categories = array();
+
+                if ($terms && !is_wp_error($terms)) {
+                    foreach ($terms as $term) {
+                        $categories[] = $term->name;
+                    }
+                }
+                $category_list = implode(', ', $categories);
+                ?>
+                data-cate="<?php echo esc_attr($category_list); ?>"
+                data-ref="<?php echo get_post_meta(get_the_ID(), 'reference', true); ?>">>
         </div>
     </div>
 </article>

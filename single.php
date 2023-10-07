@@ -7,11 +7,13 @@
 
 
 			<section class="interesse">
-				<div class="textbutton">
-					<p> Cette photo vous interesse ?</p>
-					<a id="Buttoncontact" class="loadmore_style buttoncontact">Contact</a>	
+				<div class="border">
+					<div class="textbutton">
+						<p> Cette photo vous interesse ?</p>
+						<a id="Buttoncontact" class="buttoncontact">Contact</a>	
+					</div>
+					<?php get_template_part('templates_part/nextprevarrow'); ?>
 				</div>
-				<?php get_template_part('templates_part/nextprevarrow'); ?>
 			</section>
 
 			<section class="vousaimerezaussi">

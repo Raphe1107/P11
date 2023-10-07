@@ -1,6 +1,6 @@
 <div class="hero">
     <div class="hero-photo">
-        
+        <!-- Image aléatoire -->
         <?php   
             $args = array( 
             'post_type' => 'photos',
@@ -18,7 +18,9 @@
                 <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>"><?php the_post_thumbnail('hero'); ?></a>
             <?php endif; ?>                  
                     
-        <?php endwhile; ?>            
+        <?php endwhile; ?>
+
+        <!-- Titre de l'image -->
         <h1 class="hero-title"><?php the_title(); ?></h1>
     </div>  
 </div>

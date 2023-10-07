@@ -1,12 +1,13 @@
 <div id="lightbox">
     <span class="lightbox-close">&times;</span>
+    <button class='lightbox-previous'>&larr; Précédente</button>
     <button class='lightbox-next'>Suivante &rarr;</button>
-    <button class='lightbox-prev'>&larr; Précédente</button>
     <div class="lightbox-img">
-        <a class="img-lightbox" href="<?php the_permalink();?>"><img src=""></a>
+        <img id="lightboximage" src="">
     </div>
+    
     <div class="lightbox-info">
-            <p class="lightbox-ref"></p>
-            <p class="lightbox-categorie"></p>
+        <p class="lightbox-ref"></p>
+        <p class="lightbox-cate"></p>
     </div>
 </div>
