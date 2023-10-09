@@ -4,11 +4,6 @@
 }
 
 
-body {
-    max-width: 1440px;
-    margin : 0 auto;
-    
-}
 
 /* ------------------------------ Header ------------------------------  */
 
@@ -19,6 +14,8 @@ body {
     align-items: center;
     background-color: white;
     margin-top: 10px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -58,10 +55,9 @@ body {
 
 #footer {
     border-top: 1px solid black;
-    width: 102vw;
-    margin: 0 0 0 -600px;
-    
+    width: 100%
 }
+
 .footer-menu {
     display: flex;
     justify-content: center;
@@ -183,8 +179,9 @@ body {
 /* ------------------------------ Accueil ------------------------------  */
 
 .hero {
-    width: 101vw;
-    margin: 0 0 0 -600px;
+    width: 100%;
+    margin: 0;
+    max-width: none;
 }
 .hero .hero-photo {
     position: relative;
@@ -218,9 +215,9 @@ body {
 
 .filters {
     display: flex;
-    margin-top: 70px;
-    margin-bottom: 30px;
-    margin-left: 148px;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 40px auto 40px;
 }
 
 .cate_format {
@@ -359,6 +356,8 @@ body {
     display: flex;
     width: 100%;
     margin-top: 100px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .photo-title {
@@ -442,8 +441,8 @@ body {
 
 .interesse {
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    max-width: 1440px;
+    margin: 40px auto;
 }
 
 .textbutton {
@@ -588,7 +587,7 @@ body {
 
 .lightbox-img img{
 	max-width: 800px;
-	max-height: 600px;
+	max-height: 800px;
 	object-fit: contain;
 }
 
@@ -605,17 +604,17 @@ body {
 
 .lightbox-next{
 	left: auto;
-	right: 150px;
+	right: 550px;
 }
 
 .lightbox-previous{
-	left: 150px;
+	left: 550px;
 	right: auto;
 }
 
 .lightbox-close{
-    color: black;
-    font-size: 2em;
+    color: white;
+    font-size: 4em;
     position: fixed;
     top: 40px;
     right: 40px;
@@ -625,8 +624,8 @@ body {
 .lightbox-info{
 	position: absolute;
 	bottom: 50px;
-	right: 367px;
-	left: 367px;
+	right: 500px;
+	left: 500px;
 	display: flex;
 	justify-content: space-between;
 
@@ -638,4 +637,18 @@ body {
 	font-family: "space mono";
 	text-transform: uppercase;
 	text-shadow: 1px 1px 3px #0D0D0D;
+}
+
+
+
+/* ------------------------------ Responsive ------------------------------  */
+
+@media screen and (max-width: 1400px) {
+
+   .filters {
+    margin-left: 100px;
+   }
+
+
+
 }
