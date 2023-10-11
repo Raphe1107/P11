@@ -41,15 +41,3 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }
-
-
-
-/* ---------- Pré remplissage formulaire ---------- */
-
-jQuery(document).ready(function() {
-    var ref =  "<?php echo get_post_meta(get_the_ID(), 'reference', true); ?>";
-    $("#reference").val(ref);
-});
-
-console.log(reference);
-

@@ -6,5 +6,4 @@
             <?php echo do_shortcode('[contact-form-7 id="4baa6d8" title="Contact"]') ?>
          </div>
     </div>
-    
 </div>

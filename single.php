@@ -24,3 +24,13 @@
 
 
 <?php get_footer(); ?>
+
+
+<!-- /* ---------- Pré remplissage formulaire ---------- */ -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var referenceValue = "<?php echo esc_js(get_post_meta(get_the_ID(), 'reference', true)); ?>";
+		$('#reference').val(referenceValue);
+    });
+</script>
