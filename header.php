@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <?php wp_head(); ?>
+    
 </head>
 
 <body <?php body_class(); ?> class="container">
@@ -19,8 +20,13 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" class="logo">
         </a>
     </div>
+    <div class="btn-menu-burger">
+        <span></span>
+    </div>
     <nav>
         <!-- Menu header -->
-        <?php wp_nav_menu ( array ('theme_location' => 'header-menu' ,'menu_class' => 'header-menu','container' => false ) ); ?> 
+        <?php wp_nav_menu ( array ('theme_location' => 'header-menu' ,'menu_class' => 'header-menu','container' => false ) ); ?>
     </nav>
 </header>
+
+<?php get_template_part('templates_part/menuburger'); ?>  <!-- Ajout du menu burger --> 

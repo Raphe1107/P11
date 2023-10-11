@@ -46,8 +46,10 @@ window.onclick = function(event) {
 
 /* ---------- Pré remplissage formulaire ---------- */
 
-jQuery(document).ready(function($) {
-    $('[name="your-subject"]').val('bf');
+jQuery(document).ready(function() {
+    var ref =  "<?php echo get_post_meta(get_the_ID(), 'reference', true); ?>";
+    $("#reference").val(ref);
 });
 
+console.log(reference);
 

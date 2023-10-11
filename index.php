@@ -26,7 +26,7 @@
 
             <?php
         endwhile; ?>
-
+<?php get_template_part('templates_part/modale'); ?>
 
     <?php else: ?>
         <p>Désolé, aucun article ne correspond à cette requête</p>
