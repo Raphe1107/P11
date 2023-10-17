@@ -107,8 +107,10 @@
 .close {
     color: black;
     float: right;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
+    margin-right: -350px;
+    margin-top: -130px;
 }
 
 .close:hover,
@@ -120,6 +122,7 @@
 
 .contactimg {
     width: 590px;
+    margin-top: 25px;
 }
 
 .form {
@@ -162,6 +165,8 @@
     font-weight: 600;
     cursor: pointer;
     letter-spacing: -1px;
+    margin-bottom: 10px;
+
 }
 
 .wpcf7-submit:hover {
@@ -604,11 +609,11 @@
 
 .lightbox-next{
 	left: auto;
-	right: 550px;
+	right: 350px;
 }
 
 .lightbox-previous{
-	left: 550px;
+	left: 350px;
 	right: auto;
 }
 
@@ -824,7 +829,7 @@
 }
 
 .hero img {
-    max-width: 1024px;
+    max-width: 993px;
     max-height: 500px;
 }
 
@@ -919,6 +924,11 @@ body {
     font-size: 28px;
 }
 
+.photodetails {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .photodetails p {
     font-size: 14px;
 }
@@ -1011,7 +1021,7 @@ body {
     }
 
     .trierpar {
-        margin-left: 50px;
+        margin-left: 48px;
     }
 
     .image-post article {
@@ -1060,7 +1070,12 @@ body {
     }
 
     .modale {
-        display: none !important;
+        max-width: 412px;
+    }
+
+    .modale-content {
+        width: 380px;
+        margin-top: 100px;
     }
 
     #lightbox {
@@ -1071,12 +1086,26 @@ body {
         display: none;
     }
 
+    .post {
+        margin-left: 75px;
+        width: 75%;
+    }
+
+    .refphoto {
+        margin-top: 20px;
+        width: 107%;
+    }
+
     .photo-title {
-        font-size: 15px;
+        font-size: 53px;
+        line-height:50px;
+        margin-left: 70px;
     }
 
     .photodetails p {
-        font-size: 12px;
+        font-size: 15px;
+        margin-left: 75px;
+
     }
 
     .next-prev-photo {
@@ -1094,15 +1123,24 @@ body {
 
     .same-photo-cat {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     .same-photo-cat img {
         width: 100%;
         height: 95%;
     }
 
+    .double-img {
+        margin-left: 10px;
+    }
+
    .double-img:hover .image-contenu {
     display: none;
+   }
+
+   .interesse {
+    border-bottom: black 2px solid;
+    width: 107%;
    }
 }
 

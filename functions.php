@@ -137,7 +137,7 @@ function filter_photos() {
           get_template_part('templates_part/photo-block');
       endwhile;
   else :
-      echo '<p>Aucune photo trouvée.</p>';
+      echo '<p>Aucune photo trouvée. Veuillez sélectionner les filtres</p>';
   endif;
 
   wp_reset_query();
