@@ -19,15 +19,23 @@ $('#load-more-button').on('click', function() {
 });
 
 
-/* ---------- Filtres ---------- */
+/* ---------- Filtres  ---------- */
+
+
+// design select 2
 
 jQuery(function($) {
+  $(document).ready(function() {
+    $('#date-select').select2();
+    $('#category-select').select2();
+    $('#format-select').select2();
+});
+
   $('#category-select, #format-select, #date-select').on('change', function() {
       const selectedCategory = $('#category-select').val();
       const selectedFormat = $('#format-select').val();
       const selectedDateOrder = $('#date-select').val();
 
-      // Effectuez une requête AJAX pour récupérer les photos filtrées en fonction des sélections.
       $.ajax({
           url: 'wp-admin/admin-ajax.php',
           type: 'POST',
@@ -38,12 +46,8 @@ jQuery(function($) {
               date_order: selectedDateOrder,
           },
           success: function(response) {
-              // Remplacez le contenu de la section des photos par les photos filtrées.
               $('.indexphoto').html(response);
           },
       });
   });
 });
-
-
-

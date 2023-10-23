@@ -20,7 +20,7 @@ window.onclick = function(event) {
     }
 }
 
-/* ---------- Button Contact ---------- */
+/* ---------- Bouton Contact ---------- */
 
 var modal = document.getElementById("contact");
 var btncontact = document.getElementById("Buttoncontact");

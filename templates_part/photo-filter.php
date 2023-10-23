@@ -1,7 +1,7 @@
 <section class="filters">
     <div class="cate_format">
         <div class="category">
-            <form action="" method="get">
+            <form  class="form-filtres" action="" method="post">
                 
                 <select name="category" id="category-select">
                     <option value="all" hidden>CATÉGORIES</option>
@@ -19,7 +19,7 @@
                 </select>
             </form>
         </div>
-        <form action="" method="get">
+        <form action="" method="post">
             <select name="format" id="format-select">
                 <option value="all" hidden>FORMATS</option>
                 <option value="">Tous les formats</option>
@@ -37,10 +37,10 @@
         </form>
     </div>
     <div class="trierpar">
-        <form action="" method="get">	
-            <select name="date" id="date-select">
+        <form action="" method="post">	
+            <select name="date" id="date-select" class="select2">
                 <option value="all" hidden>TRIER PAR</option>
-                <option value="DESC">Nouveautés</option>
+                <option value="DESC">Les plus récentes</option>
                 <option value="ASC">Les plus anciennes</option>
             </select>
         </form>

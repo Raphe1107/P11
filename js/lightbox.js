@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Attachez un gestionnaire d'événements au conteneur parent
+
 $(".indexphoto").on("click", ".fullscreen", function(event) {
   event.preventDefault();
 
@@ -128,4 +128,3 @@ document.addEventListener("click", function(event) {
 
 // Initialisez currentIndex au chargement initial de la page
 let currentIndex = 0;
-

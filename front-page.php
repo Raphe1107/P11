@@ -40,20 +40,4 @@
     <a href="#!" class="loadmore_style" id="load-more-button">Charger plus</a>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php get_footer() ?>

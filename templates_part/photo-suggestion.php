@@ -56,5 +56,3 @@
 <div class="plusdephoto">
     <a href="<?php echo home_url( '' ); ?>"><button class="loadmore_style">Toutes les photos</button></a>
 </div>
-            
-    

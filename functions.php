@@ -3,6 +3,7 @@
 // Ajout du fichier css
 function custom_styles() {
 	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/style.css' );
+  wp_enqueue_style('select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css');
 }
 add_action( 'wp_enqueue_scripts', 'custom_styles' );
 function load_jquery() {
@@ -18,6 +19,7 @@ function script()
   wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
   wp_enqueue_script('ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0', true);
   wp_enqueue_script('burger', get_template_directory_uri() . '/js/burger.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('select2', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array('jquery'), '4.1.0-rc.0', true);
 }
 add_action('wp_enqueue_scripts', 'script');
 
@@ -146,21 +148,3 @@ function filter_photos() {
 
 add_action('wp_ajax_filter_photos', 'filter_photos');
 add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-   
-  
